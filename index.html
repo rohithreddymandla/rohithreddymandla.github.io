@@ -3,7 +3,7 @@
 <head><meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>DATA602_Project</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<title>Project2_DS</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 
 
 
@@ -14601,7 +14601,12 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="Import-Data-and-required-libraries">Import Data and required libraries<a class="anchor-link" href="#Import-Data-and-required-libraries">&#182;</a></h3>
+<h3 id="Import-Data-and-required-libraries">Import Data and required libraries<a class="anchor-link" href="#Import-Data-and-required-libraries">&#182;</a></h3><p>Importing Necessary librarires fro Data cleaning and Preprocessing.</p>
+<p>NumPy: Provides powerful tools for numerical computing, including support for arrays, mathematical functions, and linear algebra operations.</p>
+<p>Pandas: Facilitates data manipulation and analysis through its DataFrame and Series data structures.</p>
+<p>Matplotlib: Enables the creation of static, interactive, and dynamic visualizations in Python.</p>
+<p>Seaborn: Builds on Matplotlib to create aesthetically pleasing statistical visualizations with ease.</p>
+
 </div>
 </div>
 </div>
@@ -14610,7 +14615,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[1]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[2]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -14631,7 +14636,8 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="Dataset-information">Dataset information<a class="anchor-link" href="#Dataset-information">&#182;</a></h3><p>The <a href="https://goo.gl/U2Uwz2">Breast Cancer Wisconsin (Diagnostic) Data Set</a> is obtained from UCI Machine Learning Repository. Features are computed from a digitized image of a fine needle aspirate (FNA) of a breast mass. They describe characteristics of the cell nuclei present in the image.</p>
+<h3 id="Dataset-information">Dataset information<a class="anchor-link" href="#Dataset-information">&#182;</a></h3><p>Importing numerical data from wdbc.data and column names from wdbc.names.</p>
+<p>The <a href="https://goo.gl/U2Uwz2">Breast Cancer Wisconsin (Diagnostic) Data Set</a> is obtained from UCI Machine Learning Repository. Features are computed from a digitized image of a fine needle aspirate (FNA) of a breast mass. They describe characteristics of the cell nuclei present in the image.</p>
 
 </div>
 </div>
@@ -14641,7 +14647,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[2]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[3]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;ID&#39;</span><span class="p">,</span> <span class="s1">&#39;Diagnosis&#39;</span><span class="p">,</span> <span class="s1">&#39;mean_Radius&#39;</span><span class="p">,</span> <span class="s1">&#39;mean_Texture&#39;</span><span class="p">,</span> <span class="s1">&#39;mean_Perimeter&#39;</span><span class="p">,</span> <span class="s1">&#39;mean_Area&#39;</span><span class="p">,</span> <span class="s1">&#39;mean_Smoothness&#39;</span><span class="p">,</span> <span class="s1">&#39;mean_Compactness&#39;</span><span class="p">,</span>
@@ -14664,10 +14670,10 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[3]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[4]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span> <span class="c1">#Preview of the dataset</span>
 </pre></div>
 
      </div>
@@ -14685,7 +14691,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[3]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[4]:</div>
 
 
 
@@ -15521,7 +15527,8 @@ dtype: int64</pre>
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Count-plot-of-each-diagnosis">Count plot of each diagnosis<a class="anchor-link" href="#Count-plot-of-each-diagnosis">&#182;</a></h2>
+<h2 id="Count-plot-of-each-diagnosis">Count plot of each diagnosis<a class="anchor-link" href="#Count-plot-of-each-diagnosis">&#182;</a></h2><p>Visualizing the count difference between the target variables</p>
+
 </div>
 </div>
 </div>
@@ -16328,6 +16335,18 @@ class="
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h3 id="Conclusion:">Conclusion:<a class="anchor-link" href="#Conclusion:">&#182;</a></h3><p>From above correlation map, I can see that these features ['mean_Perimeter', 'mean_Area', 'se_Area', 'worst_Perimeter', 'worst_Area'] are highly correlated. So, I will use feature selection in the next process to validate this.</p>
+
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="Create-a-model">Create a model<a class="anchor-link" href="#Create-a-model">&#182;</a></h2>
 </div>
 </div>
@@ -16508,7 +16527,8 @@ class="
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="1)-Random-Forest-Classifier">1) Random Forest Classifier<a class="anchor-link" href="#1)-Random-Forest-Classifier">&#182;</a></h3><h3 id="Model-Training">Model Training<a class="anchor-link" href="#Model-Training">&#182;</a></h3>
+<h3 id="1)-Random-Forest-Classifier">1) Random Forest Classifier<a class="anchor-link" href="#1)-Random-Forest-Classifier">&#182;</a></h3><p>Importing Random Forest Classifier from sklearn and splitting Dataset into Train set and Test set of size 33%.</p>
+<h3 id="Model-Training">Model Training<a class="anchor-link" href="#Model-Training">&#182;</a></h3>
 </div>
 </div>
 </div>
@@ -16544,7 +16564,16 @@ class="
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="Model-Evaluation">Model Evaluation<a class="anchor-link" href="#Model-Evaluation">&#182;</a></h3>
+<h3 id="Model-Evaluation">Model Evaluation<a class="anchor-link" href="#Model-Evaluation">&#182;</a></h3><p>Evaluating the performance of the ML model. Importing Classification report and Confusion Matrix from Sklearn metrics</p>
+<p>Confusion Matrix: Shows the counts of true positives (TP), true negatives (TN), false positives (FP), and false negatives (FN) in a classification problem.</p>
+<p>Precision: The proportion of true positive predictions among all positive predictions (measure of exactness).</p>
+<p>Recall: The proportion of true positives identified among all actual positives (measure of completeness).</p>
+<p>F1-Score: The harmonic mean of precision and recall, balancing both metrics.</p>
+<p>Support: The number of actual occurrences of each class in the dataset.</p>
+<p>Accuracy: The ratio of correctly classified instances to the total instances.</p>
+<p>Macro Avg: Average of precision, recall, and F1-score calculated independently for each class (treats all classes equally).</p>
+<p>Weighted Avg: Weighted average of precision, recall, and F1-score, considering the support (class frequency).</p>
+
 </div>
 </div>
 </div>
@@ -16624,7 +16653,8 @@ weighted avg       0.96      0.96      0.96       188
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="2)-PCA-and-SVM">2) PCA and SVM<a class="anchor-link" href="#2)-PCA-and-SVM">&#182;</a></h2>
+<h2 id="2)-PCA-and-SVM">2) PCA and SVM<a class="anchor-link" href="#2)-PCA-and-SVM">&#182;</a></h2><p>PCA is often used before applying SVM to reduce the number of features while retaining the most significant information. This can enhance the performance of SVM, especially when dealing with high-dimensional datasets that may be noisy or redundant.</p>
+
 </div>
 </div>
 </div>
@@ -17216,6 +17246,7 @@ weighted avg       0.97      0.97      0.97       188
 <p>In the initial phase of this project, I conducted exploratory data analysis to gain insights into the 30 original features and their potential association with cancer.</p>
 <p>Subsequently, I used univariate feature selection to identify the 5 most significant features and implemented a Random Forest classifier, achieving an accuracy of 97%.</p>
 <p>Additionally, I applied PCA to extract two principal components and created a visualization, which demonstrated a clear separation between cancer and non-cancer cases using just these two variables. Finally, I employed a Support Vector Machine model to predict cancer based on the PCA-transformed data, achieving an accuracy of 95%.</p>
+<p>So, I decide choose Random Forest Classifier ML model for predicting Breast Tumor over SVM with PCA.</p>
 
 </div>
 </div>
